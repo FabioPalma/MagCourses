@@ -88,19 +88,6 @@ namespace MagCourses.DAL
             context.SaveChanges();
 
 
-            //List<CourseSubject> courseSubject = new List<CourseSubject>
-            //{
-            //    new CourseSubject{CourseID = 1, SubjectID=1},
-            //    new CourseSubject{CourseID = 1, SubjectID=2},
-            //    new CourseSubject{CourseID = 2, SubjectID=2},
-            //    new CourseSubject{CourseID = 2, SubjectID=3},
-            //    new CourseSubject{CourseID = 3, SubjectID=1},
-            //    new CourseSubject{CourseID = 3, SubjectID=3}
-            //};
-
-            //context.SaveChanges();
-
-
             //********* Enrollments *********
 
             var enrollments = new List<Enrollment>

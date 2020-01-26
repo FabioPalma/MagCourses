@@ -60,7 +60,7 @@ namespace MagCourses.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "ID", "Name", enrollment.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "Name", enrollment.CourseID);
             ViewBag.StudentID = new SelectList(db.Students, "StudentID", "Name", enrollment.StudentID);
             ViewBag.SubjectID = new SelectList(db.Subjects, "SubjectID", "Name", enrollment.SubjectID);
             return View(enrollment);
@@ -78,7 +78,7 @@ namespace MagCourses.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "ID", "Name", enrollment.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "Name", enrollment.CourseID);
             ViewBag.StudentID = new SelectList(db.Students, "StudentID", "Name", enrollment.StudentID);
             ViewBag.SubjectID = new SelectList(db.Subjects, "SubjectID", "Name", enrollment.SubjectID);
             return View(enrollment);
@@ -97,7 +97,7 @@ namespace MagCourses.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "ID", "Name", enrollment.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "Name", enrollment.CourseID);
             ViewBag.StudentID = new SelectList(db.Students, "StudentID", "Name", enrollment.StudentID);
             ViewBag.SubjectID = new SelectList(db.Subjects, "SubjectID", "Name", enrollment.SubjectID);
             return View(enrollment);

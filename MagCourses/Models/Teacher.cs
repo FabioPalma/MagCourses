@@ -10,6 +10,8 @@ namespace MagCourses.Models
     {
 
         public int TeacherID { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:C2}")]
         public double Salary { get; set; }
         
     }

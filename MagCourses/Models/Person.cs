@@ -10,6 +10,8 @@ namespace MagCourses.Models
     {
         [Required]
         public string Name { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Birthday { get; set; }
     }
 }
