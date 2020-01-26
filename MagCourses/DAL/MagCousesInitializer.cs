@@ -6,8 +6,7 @@ using System.Web;
 
 namespace MagCourses.DAL
 {
-    //public class MagCousesInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<MagCoursesContext>
-        public class MagCousesInitializer : System.Data.Entity.DropCreateDatabaseAlways<MagCoursesContext>
+    public class MagCousesInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<MagCoursesContext>
     {
 
         protected override void Seed(MagCoursesContext context)
