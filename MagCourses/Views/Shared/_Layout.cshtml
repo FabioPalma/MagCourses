@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagCourses - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                @Html.ActionLink("MagCourses", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse justify-content-end">
+                <ul class="navbar-nav animate side-nav">
+                    <li class="nav-item">@Html.ActionLink("Courses", "Index", "Courses", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Subjects", "Index", "Subjects", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Enrollments", "Index", "Enrollments", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Teachers", "Index", "Teachers", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Students", "Index", "Students", null, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - MagCourses</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

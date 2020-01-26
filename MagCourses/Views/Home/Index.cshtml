@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>MagCourses</h1>
+                <p class="lead">College Management System</p>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+                    <li>@Html.ActionLink("Subjects", "Index", "Subjects")</li>
+                    <li>@Html.ActionLink("Enrollments", "Index", "Enrollments")</li>
+                    <li>@Html.ActionLink("Teachers", "Index", "Teachers")</li>
+                    <li>@Html.ActionLink("Students", "Index", "Students")</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>@Html.ActionLink("Courses Report", "Courses", "Lists")</li>
+                    <li>@Html.ActionLink("Subjects Report", "Subjects", "Lists")</li>
+                    <li>@Html.ActionLink("Students Report", "Students", "Lists")</li>                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>

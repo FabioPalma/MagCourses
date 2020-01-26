@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MagCourses.Models.CourseDetail>
+
+@{
+    ViewBag.Title = "Courses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Courses Detail</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberTeachers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberStudents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Average)
+        </th>        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberTeachers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberStudents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Average)
+        </td>       
+    </tr>
+}
+
+</table>
